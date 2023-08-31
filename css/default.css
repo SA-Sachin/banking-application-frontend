@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url("../images/main_bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#sample-text-card {
+  margin: 0px 100px;
+  font-family: Comfortaa;
+}
+
+#sample-text-card h1 {
+  font-size: 60px;
+}
+
+#sample-text-card p {
+  font-size: 14px;
+}
+
+.button-wrapper a {
+  width: 150px;
+}
+
+
