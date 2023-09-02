@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  font-family: Confortaa;
+}
+
+.body {
+  background-color: rgb(211, 217, 226);
+}
+
+.main-page-header {
+  padding: 10px 0px;
+}
+
+.main-page-header .company-name {
+  font-weight: 600;
+  font-family: Comfortaa;
+  color: white;
+}
+
+.navigation {
+  margin-left: 20px;
+}
+
+.navigation li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0px 15px;
+}
+
+.navigation li a {
+  color: white;
+  text-decoration: none;
+}
+
+.display-name{
+  font-weight: 600;
+}
