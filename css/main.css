@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family: Confortaa;
+  font-family: Comfortaa;
 }
 
 .body {
   background-color: rgb(211, 217, 226);
+  
 }
 
 .main-page-header {
@@ -13,7 +14,6 @@
 
 .main-page-header .company-name {
   font-weight: 600;
-  font-family: Comfortaa;
   color: white;
 }
 
