@@ -1,54 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Add Bootstrap CSS -->
-  <link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Comfortaa"
-/>
-<link rel="stylesheet" href="css/main.css">
-  <title>Dashboard | Biz BanK</title>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add Bootstrap 4 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Dashboard | Biz BanK</title>
+  </head>
+  <body>
     <header class="main-page-header mb-3 bg-primary">
-
       <div class="container d-flex align-items-center">
-
-        <div class="company-name">
-          Biz BanK
-        </div>
+        <div class="company-name">Biz BanK</div>
 
         <nav class="navigation">
           <li><a href="">Dashboard</a></li>
           <li><a href="">Payment History</a></li>
           <li><a href="">Transaction History</a></li>
-          
         </nav>
 
         <div class="display-name ms-2 ml-5 text-white">
           Welcome: <span>John</span>
         </div>
 
-        <a href="" class="btn btn-sm ml-5 text-white">
-          Sign Out
-        </a>
-
+        <a href="" class="btn btn-sm ml-5 text-white"> Sign Out </a>
       </div>
-
     </header>
 
+    <div class="container">
+      <button class="btn btn" id="openAccountButton">Create an Account</button>
+      <div class="offcanvas" tabindex="-1" id="offcanvasExample">
+        <div class="offcanvas-header d-flex d-lg-none">
+          <h5 class="offcanvas-title text-white">Create</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="offcanvas-body p-lg-0">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Personal Account</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Business Account</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Foreign Account</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Contact</a
+              >
+            </li>
+            <button class="btn btn-warning" id="closeOffcanvasButton">
+              Close
+            </button>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap 4 scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+
+    <script>
+      document
+        .getElementById("openAccountButton")
+        .addEventListener("click", function () {
+          $("#offcanvasExample").addClass("show");
+        });
+
+      document
+        .getElementById("closeOffcanvasButton")
+        .addEventListener("click", function () {
+          $("#offcanvasExample").removeClass("show");
+        });
+    </script>
+  </body>
 </html>
