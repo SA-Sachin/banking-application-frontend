@@ -53,6 +53,12 @@
       </button>
     </div>
 
+    <!--Total Account Balance-->
+    <div class="container d-flex py-3">
+      <h2 class="flex-grow-1">Total Account Balance :</h2>
+      <h2 class="ms-auto">0.00</h2>
+    </div>
+
     <div class="container">
       <div id="accordion">
         <div class="card">
@@ -173,13 +179,76 @@
         </button>
       </div>
       <div class="offcanvas-body p-lg-0">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"
-              >Transactions</a
-            >
-          </li>
-        </ul>
+        <div class="offcanvas-body p-lg-0">
+          <h3>Transact</h3>
+          <small class="card-text mb-3">
+            Choose an option to perform a Transaction
+          </small>
+
+          <select name="transact-type" class="form-control col-md-8 mt-2" id="">
+            <option value="">--Select Transact Type--</option>
+            <option value="payment">Payment</option>
+            <option value="transfer">Transfer</option>
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+          </select>
+
+          <div class="card payment-card">
+            <div class="card-body">
+              <div class="form-group mb-2">
+                <label for="">Account Holder / Beneficiary</label>
+                <input
+                  type="text"
+                  name="beneficiary"
+                  class="form-control"
+                  placeholder="Enter Account Holder / Benificiary Name"
+                />
+              </div>
+
+              <div class="form-group mb-2">
+                <label for="">Beneficiary Account Number</label>
+                <input
+                  type="text"
+                  name="account_number"
+                  class="form-control"
+                  placeholder="Enter Benificiary Account No"
+                />
+              </div>
+
+              <div class="form-group mb-2">
+                <label for="">Select Account</label>
+                <select name="account_id" class="form-control" id="">
+                  <option value="">--Select Account--</option>
+                </select>
+              </div>
+
+              <div class="form-group mb-2">
+                <label for="">Reference</label>
+                <input
+                  type="text"
+                  name="reference"
+                  class="form-control"
+                  placeholder="Enter Reference"
+                />
+              </div>
+
+              <div class="form-group mb-2">
+                <label for="">Enter payment Amount</label>
+                <input
+                  type="text"
+                  name="payment_amount"
+                  class="form-control"
+                  placeholder="Enter Payment Amount"
+                />
+              </div>
+
+              <div class="form-group mb-2">
+                <button class="btn btn-warning transact-btn">Pay</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
