@@ -15,7 +15,7 @@
 
 <body>
   <div class="backdrop"></div>
-  <header class="main-page-header mb-3 bg-primary">
+  <header class="main-page-header b-3 bg-primary">
     <div class="container d-flex align-items-center">
       <div class="btn btn-company-name text-white">
         <a class="text-white" href="index.html">Biz BanK</a>
@@ -130,13 +130,12 @@
       </button>
     </div>
     <div class="offcanvas-body p-lg-0">
-      <h3>Transact</h3>
-      <img src="main_bg.png" /> <!-- Add this line to insert the image -->
-      <small class="card-text mb-3">
+      <h3 class="ml- mt-3 text-bold ml-4">Transact</h3>
+      <small class="card-text mb-3 ml-4">
         Choose an option to perform a Transaction
       </small>
 
-      <select name="transact-type" class="form-control col-md-8 mt-2" id="transact-type">
+      <select name="transact-type" class="form-control col-md-8 mt-2 ml-4" id="transact-type">
         <option value="">--Select Transact Type--</option>
         <option value="payment">Payment</option>
         <option value="transfer">Transfer</option>
@@ -145,7 +144,7 @@
       </select>
 
       <!--Payment Section-->
-      <div class="card payment-card mt-4" id="payment-section">
+      <div class="card payment-card mt-4 ml-4 mr-4" id="payment-section">
         <div class="card-body">
           <div class="form-group mb-2">
             <label for="">Account Holder / Beneficiary</label>
@@ -171,18 +170,18 @@
           </div>
 
           <div class="form-group mb-2">
-            <label for="">Enter payment Amount</label>
+            <label for="">Enter Payment Amount</label>
             <input type="text" name="payment_amount" class="form-control" placeholder="Enter Payment Amount" />
           </div>
 
           <div class="form-group mb-2">
-            <button class="btn btn-warning transact-btn mt-4">Pay</button>
+            <button class="btn btn-warning transact-btn mt-2">Pay</button>
           </div>
         </div>
       </div>
 
       <!-- Transaction Section -->
-      <div class="card payment-card mt-4" id="transaction-section" style="display: none;">
+      <div class="card payment-card mt-4 ml-4 mr-4" id="transaction-section">
         <div class="card-body">
           <div class="form-group mb-2">
             <label for="">Select Account</label>
@@ -204,10 +203,56 @@
           </div>
 
           <div class="form-group mb-2">
-            <button class="btn btn-warning transact-btn mt-4">Pay</button>
+            <button class="btn btn-warning transact-btn mt-2">Transfer</button>
           </div>
         </div>
       </div>
+
+      <!-- Deposit Section -->
+      <div class="card payment-card mt-4 ml-4 mr-4" id="deposit-section">
+        <div class="card-body">
+
+          <div class="form-group mb-2">
+            <label for="deposit-amount">Enter Deposit Amount</label>
+            <input type="text" name="deposit_amount" class="form-control" id="deposit-amount"
+              placeholder="Enter Deposit Amount" />
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="deposit-account-select">Select Account</label>
+            <select name="account_id" class="form-control" id="deposit-account-select">
+              <option value="">--Select Account--</option>
+
+            </select>
+          </div>
+
+          <div class="form-group mb-2">
+            <button class="btn btn-warning transact-btn mt-2">Deposit</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Withdraw Section -->
+      <div class="card payment-card mt-4 ml-4 mr-4" id="withdraw-section">
+        <div class="card-body">
+          <div class="form-group mb-2">
+            <label for="">Enter Withdrawal Amount</label>
+            <input type="text" name="withdraw_amount" class="form-control" placeholder="Enter Withdraw Amount" />
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="">Select Account</label>
+            <select name="account_id" class="form-control" id="withdraw-account-select">
+              <option value="">--Select Account--</option>
+            </select>
+          </div>
+
+          <div class="form-group mb-2">
+            <button class="btn btn-warning transact-btn mt-2">Withdraw</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   </div>
@@ -241,28 +286,56 @@
       const transactTypeSelect = document.getElementById("transact-type");
       const paymentSection = document.getElementById("payment-section");
       const transactionSection = document.getElementById("transaction-section");
+      const depositSection = document.getElementById("deposit-section");
+      const withdrawSection = document.getElementById("withdraw-section");
 
-      // Initialize the sections to be hidden
       paymentSection.style.display = "none";
       transactionSection.style.display = "none";
+      depositSection.style.display = "none";
+      withdrawSection.style.display = "none";
 
-      // Add an event listener to the select element
       transactTypeSelect.addEventListener("change", function () {
         const selectedOption = transactTypeSelect.value;
-        if (selectedOption === "payment") {
-          paymentSection.style.display = "block";
-          transactionSection.style.display = "none";
-        } else if (selectedOption === "transfer") {
+
+        if (selectedOption === "") {
           paymentSection.style.display = "none";
-          transactionSection.style.display = "block";
+          transactionSection.style.display = "none";
+          depositSection.style.display = "none";
+          withdrawSection.style.display = "none";
         } else {
-          // When "--Select Transact Type--" is selected, hide both sections
-          paymentSection.style.display = "none";
-          transactionSection.style.display = "none";
+          switch (selectedOption) {
+            case "payment":
+              paymentSection.style.display = "block";
+              transactionSection.style.display = "none";
+              depositSection.style.display = "none";
+              withdrawSection.style.display = "none";
+              break;
+            case "transfer":
+              paymentSection.style.display = "none";
+              transactionSection.style.display = "block";
+              depositSection.style.display = "none";
+              withdrawSection.style.display = "none";
+              break;
+            case "deposit":
+              paymentSection.style.display = "none";
+              transactionSection.style.display = "none";
+              depositSection.style.display = "block";
+              withdrawSection.style.display = "none";
+              break;
+            case "withdraw":
+              paymentSection.style.display = "none";
+              transactionSection.style.display = "none";
+              depositSection.style.display = "none";
+              withdrawSection.style.display = "block";
+              break;
+            default:
+              paymentSection.style.display = "none";
+              transactionSection.style.display = "none";
+              depositSection.style.display = "none";
+          }
         }
       });
     });
-
   </script>
 </body>
 
