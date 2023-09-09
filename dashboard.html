@@ -1,291 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Comfortaa"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Dashboard | Biz BanK</title>
-  </head>
-  <body>
-    <div class="backdrop"></div>
-    <header class="main-page-header mb-3 bg-primary">
-      <div class="container d-flex align-items-center">
-        <div class="btn btn-company-name text-white">
-          <a class="text-white" href="index.html">Biz BanK</a>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Dashboard | Biz BanK</title>
+</head>
+
+<body>
+  <div class="backdrop"></div>
+  <header class="main-page-header mb-3 bg-primary">
+    <div class="container d-flex align-items-center">
+      <div class="btn btn-company-name text-white">
+        <a class="text-white" href="index.html">Biz BanK</a>
+      </div>
+
+      <nav class="navigation">
+        <li><a href="">Dashboard</a></li>
+        <li><a href="">Payment History</a></li>
+        <li><a href="">Transaction History</a></li>
+      </nav>
+
+      <div class="display-name ms-2 ml-5 text-white">
+        Welcome: <span>John</span>
+      </div>
+
+      <div class="ml-auto">
+        <a href="" class="btn btn-sm text-white"> Sign Out </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <button class="btn btn" id="openLeftOffcanvasButton">
+      <i class="fab fa-cc-visa"></i> Add New Account
+    </button>
+    <button class="btn btn float-right" id="openRightOffcanvasButton">
+      <i class="fas fa-money-bill"></i> Transact
+    </button>
+  </div>
+
+  <!--Total Account Balance-->
+  <div class="container d-flex py-3">
+    <h2 class="flex-grow-1">Total Account Balance :</h2>
+    <h2 class="ms-auto">0.00</h2>
+  </div>
+
+  <div class="container">
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">
+              Collapsible Group Item #1
+            </button>
+          </h5>
         </div>
 
-        <nav class="navigation">
-          <li><a href="">Dashboard</a></li>
-          <li><a href="">Payment History</a></li>
-          <li><a href="">Transaction History</a></li>
-        </nav>
-
-        <div class="display-name ms-2 ml-5 text-white">
-          Welcome: <span>John</span>
-        </div>
-
-        <div class="ml-auto">
-          <a href="" class="btn btn-sm text-white"> Sign Out </a>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">03</div>
         </div>
       </div>
-    </header>
-
-    <div class="container">
-      <button class="btn btn" id="openLeftOffcanvasButton">
-        <i class="fab fa-cc-visa"></i> Add New Account
-      </button>
-      <button class="btn btn float-right" id="openRightOffcanvasButton">
-        <i class="fas fa-money-bill"></i> Transact
-      </button>
-    </div>
-
-    <!--Total Account Balance-->
-    <div class="container d-flex py-3">
-      <h2 class="flex-grow-1">Total Account Balance :</h2>
-      <h2 class="ms-auto">0.00</h2>
-    </div>
-
-    <div class="container">
-      <div id="accordion">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              <button
-                class="btn btn-link"
-                data-toggle="collapse"
-                data-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                Collapsible Group Item #1
-              </button>
-            </h5>
-          </div>
-
-          <div
-            id="collapseOne"
-            class="collapse show"
-            aria-labelledby="headingOne"
-            data-parent="#accordion"
-          >
-            <div class="card-body">03</div>
-          </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Collapsible Group Item #2
+            </button>
+          </h5>
         </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              <button
-                class="btn btn-link collapsed"
-                data-toggle="collapse"
-                data-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                Collapsible Group Item #2
-              </button>
-            </h5>
-          </div>
-          <div
-            id="collapseTwo"
-            class="collapse"
-            aria-labelledby="headingTwo"
-            data-parent="#accordion"
-          >
-            <div class="card-body">01</div>
-          </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">01</div>
         </div>
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-              <button
-                class="btn btn-link collapsed"
-                data-toggle="collapse"
-                data-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
-                Collapsible Group Item #3
-              </button>
-            </h5>
-          </div>
-          <div
-            id="collapseThree"
-            class="collapse"
-            aria-labelledby="headingThree"
-            data-parent="#accordion"
-          >
-            <div class="card-body">02</div>
-          </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              Collapsible Group Item #3
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">02</div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container">
-      <div class="card no-accounts-card">
+  <div class="container">
+    <div class="card no-accounts-card">
+      <div class="card-body">
+        <h1 class="card-title">
+          <i class="fas fa-ban text-danger"></i>
+          No Registered Accounts
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="left-side-offcanvas" tabindex="-1" id="leftOffcanvasExample">
+    <div class="offcanvas-header">
+      <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close" id="closeLeftOffcanvasButton">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="offcanvas-body p-lg-0">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Accounts</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="right-side-offcanvas" tabindex="-1" id="rightOffcanvasExample">
+    <div class="offcanvas-header">
+      <button type="button" class="close" data-dismiss="offcanvas" aria-label="Close" id="closeRightOffcanvasButton">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="offcanvas-body p-lg-0">
+      <h3>Transact</h3>
+      <img src="main_bg.png" /> <!-- Add this line to insert the image -->
+      <small class="card-text mb-3">
+        Choose an option to perform a Transaction
+      </small>
+
+      <select name="transact-type" class="form-control col-md-8 mt-2" id="transact-type">
+        <option value="">--Select Transact Type--</option>
+        <option value="payment">Payment</option>
+        <option value="transfer">Transfer</option>
+        <option value="deposit">Deposit</option>
+        <option value="withdraw">Withdraw</option>
+      </select>
+
+      <!--Payment Section-->
+      <div class="card payment-card mt-4" id="payment-section">
         <div class="card-body">
-          <h1 class="card-title">
-            <i class="fas fa-ban text-danger"></i>
-            No Registered Accounts
-          </h1>
+          <div class="form-group mb-2">
+            <label for="">Account Holder / Beneficiary</label>
+            <input type="text" name="beneficiary" class="form-control"
+              placeholder="Enter Account Holder / Benificiary Name" />
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="">Beneficiary Account Number</label>
+            <input type="text" name="account_number" class="form-control" placeholder="Enter Benificiary Account No" />
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="">Select Account</label>
+            <select name="account_id" class="form-control" id="payment-account-select">
+              <option value="">--Select Account--</option>
+            </select>
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="">Reference</label>
+            <input type="text" name="reference" class="form-control" placeholder="Enter Reference" />
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="">Enter payment Amount</label>
+            <input type="text" name="payment_amount" class="form-control" placeholder="Enter Payment Amount" />
+          </div>
+
+          <div class="form-group mb-2">
+            <button class="btn btn-warning transact-btn mt-4">Pay</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="left-side-offcanvas" tabindex="-1" id="leftOffcanvasExample">
-      <div class="offcanvas-header">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="offcanvas"
-          aria-label="Close"
-          id="closeLeftOffcanvasButton"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="offcanvas-body p-lg-0">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Accounts</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <!-- Transaction Section -->
+      <div class="card payment-card mt-4" id="transaction-section" style="display: none;">
+        <div class="card-body">
+          <div class="form-group mb-2">
+            <label for="">Select Account</label>
+            <select name="account_id" class="form-control" id="transaction-account-select">
+              <option value="">--Select Account--</option>
+            </select>
+          </div>
 
-    <div class="right-side-offcanvas" tabindex="-1" id="rightOffcanvasExample">
-      <div class="offcanvas-header">
-        <button
-          type="button"
-          class="close"
-          data-dismiss="offcanvas"
-          aria-label="Close"
-          id="closeRightOffcanvasButton"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="offcanvas-body p-lg-0">
-        <div class="offcanvas-body p-lg-0">
-          <h3>Transact</h3>
-          <small class="card-text mb-3">
-            Choose an option to perform a Transaction
-          </small>
+          <div class="form-group mb-2">
+            <label for="">Select Account</label>
+            <select name="account_id" class="form-control" id="transaction-account-select">
+              <option value="">--Select Account--</option>
+            </select>
+          </div>
 
-          <select name="transact-type" class="form-control col-md-8 mt-2" id="">
-            <option value="">--Select Transact Type--</option>
-            <option value="payment">Payment</option>
-            <option value="transfer">Transfer</option>
-            <option value="deposit">Deposit</option>
-            <option value="withdraw">Withdraw</option>
-          </select>
+          <div class="form-group mb-2">
+            <label for="">Enter Transfer Amount</label>
+            <input type="text" name="transfer_amount" class="form-control" placeholder="Enter Transfer Amount" />
+          </div>
 
-          <div class="card payment-card">
-            <div class="card-body">
-              <div class="form-group mb-2">
-                <label for="">Account Holder / Beneficiary</label>
-                <input
-                  type="text"
-                  name="beneficiary"
-                  class="form-control"
-                  placeholder="Enter Account Holder / Benificiary Name"
-                />
-              </div>
-
-              <div class="form-group mb-2">
-                <label for="">Beneficiary Account Number</label>
-                <input
-                  type="text"
-                  name="account_number"
-                  class="form-control"
-                  placeholder="Enter Benificiary Account No"
-                />
-              </div>
-
-              <div class="form-group mb-2">
-                <label for="">Select Account</label>
-                <select name="account_id" class="form-control" id="">
-                  <option value="">--Select Account--</option>
-                </select>
-              </div>
-
-              <div class="form-group mb-2">
-                <label for="">Reference</label>
-                <input
-                  type="text"
-                  name="reference"
-                  class="form-control"
-                  placeholder="Enter Reference"
-                />
-              </div>
-
-              <div class="form-group mb-2">
-                <label for="">Enter payment Amount</label>
-                <input
-                  type="text"
-                  name="payment_amount"
-                  class="form-control"
-                  placeholder="Enter Payment Amount"
-                />
-              </div>
-
-              <div class="form-group mb-2">
-                <button class="btn btn-warning transact-btn">Pay</button>
-              </div>
-              
-            </div>
+          <div class="form-group mb-2">
+            <button class="btn btn-warning transact-btn mt-4">Pay</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script>
-      document
-        .getElementById("openLeftOffcanvasButton")
-        .addEventListener("click", function () {
-          $("#leftOffcanvasExample").addClass("show");
-          $(".backdrop").show();
-        });
+  <script>
+    document.getElementById("openLeftOffcanvasButton").addEventListener("click", function () {
+      $("#leftOffcanvasExample").addClass("show");
+      $(".backdrop").show();
+    });
 
-      document
-        .getElementById("closeLeftOffcanvasButton")
-        .addEventListener("click", function () {
-          $("#leftOffcanvasExample").removeClass("show");
-          $(".backdrop").hide();
-        });
+    document.getElementById("closeLeftOffcanvasButton").addEventListener("click", function () {
+      $("#leftOffcanvasExample").removeClass("show");
+      $(".backdrop").hide();
+    });
 
-      document
-        .getElementById("openRightOffcanvasButton")
-        .addEventListener("click", function () {
-          $("#rightOffcanvasExample").addClass("show");
-          $(".backdrop").show();
-        });
+    document.getElementById("openRightOffcanvasButton").addEventListener("click", function () {
+      $("#rightOffcanvasExample").addClass("show");
+      $(".backdrop").show();
+    });
 
-      document
-        .getElementById("closeRightOffcanvasButton")
-        .addEventListener("click", function () {
-          $("#rightOffcanvasExample").removeClass("show");
-          $(".backdrop").hide();
-        });
-    </script>
-  </body>
+    document.getElementById("closeRightOffcanvasButton").addEventListener("click", function () {
+      $("#rightOffcanvasExample").removeClass("show");
+      $(".backdrop").hide();
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const transactTypeSelect = document.getElementById("transact-type");
+      const paymentSection = document.getElementById("payment-section");
+      const transactionSection = document.getElementById("transaction-section");
+
+      // Initialize the sections to be hidden
+      paymentSection.style.display = "none";
+      transactionSection.style.display = "none";
+
+      // Add an event listener to the select element
+      transactTypeSelect.addEventListener("change", function () {
+        const selectedOption = transactTypeSelect.value;
+        if (selectedOption === "payment") {
+          paymentSection.style.display = "block";
+          transactionSection.style.display = "none";
+        } else if (selectedOption === "transfer") {
+          paymentSection.style.display = "none";
+          transactionSection.style.display = "block";
+        } else {
+          // When "--Select Transact Type--" is selected, hide both sections
+          paymentSection.style.display = "none";
+          transactionSection.style.display = "none";
+        }
+      });
+    });
+
+  </script>
+</body>
+
 </html>
-
-<!--updated-->
